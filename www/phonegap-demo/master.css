@@ -27,6 +27,13 @@
     margin:0;
     border-top:1px solid #393939;
   }
+  input{
+      box-shadow: none;
+      margin: none;
+      border: none;
+      
+  }
+  
 
   #info{
     background:#ffa;
@@ -72,10 +79,6 @@
   }
 
   /* Content Styling */
-  #stage.theme > h1, #stage.theme > h2, #stage.theme > p{
-    margin:1em 0 .5em 13px;
-  }
-
   #stage.theme > h1{
     color:#eee;
     font-size:1.6em;

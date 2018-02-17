@@ -149,7 +149,7 @@ function check_network() {
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.NONE]     = 'No network connection';
 
-    confirm('Connection type:\n ' + states[networkState]);
+    confirm('This is your connection type:\n ' + 'You are currently using\n' + states[networkState]);
 }
 
 var watchID = null;

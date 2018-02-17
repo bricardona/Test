@@ -23,27 +23,61 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <!-- Javascripts -->
     <script type="text/javascript" src="components/loader.js"></script>
+    <script type="text/javascript" src="phonegap-demo/mqtt.js"></script>
+    <script type="text/javascript" src="phonegap-demo/mqttclient.js"></script>
+    
+    <!-- Style Sheets -->
     <link rel="stylesheet" type="text/css" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    
     <script type="text/javascript">
         document.addEventListener("deviceready", onDeviceReady, false);
         function onDeviceReady(){
             console.log("PhoneGap is ready.");
         }
     </script>
+    
     <link rel="stylesheet" href="phonegap-demo/master.css" type="text/css" media="screen" title="no title">
+    
     <script type="text/javascript" charset="utf-8" src="phonegap-demo/main.js"></script>
+    
   </head>
+  
   <body onload="init();" id="stage" class="theme">
 
-    <h1>Welcome to Cordova!</h1>
-    <h2>this file is located at phonegap-demo.html</h2>
+    
+    <h1>Indoor Positioning System</h1>
+    <h2>This is a work in progress</h2>
+    
+    <div align="center">
+    
+        <form>
+            <!--<label>Search</label>-->
+            <!--<input type="text" placeholder="Search" size="30"/>-->
+        </form>
+        
+    </div>
+    
+    <form>
+        <p class="section-title"> Publish Message</p>
+        <p class="input-header">Topic:</p>
+        <input type="text" id="topic"/>
+        <p class="input-header">Message:</p>
+        <input type="text" id="message"/>
+        <a class="button--small" onclick="SendMessage();">Publish</a>
+    </form>
+    
+    
+    <!--
     <div id="info">
         <h4>Platform: <span id="platform"> &nbsp;</span>,   Version: <span id="version">&nbsp;</span></h4>
         <h4>UUID: <span id="uuid"> &nbsp;</span>,   Name: <span id="name">&nbsp;</span></h4>
         <h4>Width: <span id="width"> &nbsp;</span>,   Height: <span id="height">&nbsp;
                    </span>, Color Depth: <span id="colorDepth"></span></h4>
      </div>
+     
     <dl id="accel-data">
       <dt>X:</dt><dd id="x">&nbsp;</dd>
       <dt>Y:</dt><dd id="y">&nbsp;</dd>
@@ -56,12 +90,22 @@
     <a href="#" class="btn large" onclick="show_pic();">Get a Picture</a>
     <a href="#" class="btn large" onclick="get_contacts();return false;">Get Phone's Contacts</a>
     <a href="#" class="btn large" onclick="check_network();return false;">Check Network</a>
+    
+    
     <dl>
-    <dt>Compass Heading:</dt><dd id="h">Off</dd>
+    <dt>Compass Heading:</dt> <dd id="h">Off</dd>
     </dl>
+    
+    <dl>
+    <dt>Compass Heading:</dt> <dd id="b">On</dd>
+    </dl>
+    
     <a href="#" class="btn large" onclick="toggleCompass();return false;">Toggle Compass</a>
+    
     <div id="viewport" class="viewport" style="display: none;">
       <img style="width:60px;height:60px" id="test_img" src="" />
     </div>
+    -->
+    
   </body>
 </html>
