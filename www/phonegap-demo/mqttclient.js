@@ -36,5 +36,6 @@ function SendMessage() {
   var text = document.getElementById('message').value;
   message = new Paho.MQTT.Message(text);
   message.destinationName = topic;
-  client.send(message); 
+  client.send(message);
+  confirm('Message "'+text+'" sent to topic "'+topic+'".');
 }

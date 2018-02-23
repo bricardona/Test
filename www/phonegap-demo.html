@@ -27,6 +27,7 @@
     <script type="text/javascript" src="components/loader.js"></script>
     <script type="text/javascript" src="phonegap-demo/mqtt.js"></script>
     <script type="text/javascript" src="phonegap-demo/mqttclient.js"></script>
+    <script type="text/javascript" src="phonegap-demo/hammer.min.js"></script>
     
     <!-- Style Sheets -->
     <link rel="stylesheet" type="text/css" href="components/loader.css">
@@ -44,32 +45,41 @@
     <script type="text/javascript" charset="utf-8" src="phonegap-demo/main.js"></script>
     
   </head>
-  
   <body onload="init();" id="stage" class="theme">
 
     
     <h1>Indoor Positioning System</h1>
     <h2>This is a work in progress</h2>
     
-    <div align="center">
+    <div id="map-container" class="map-container">
+        <canvas id="real-map" class="real-map"></canvas>
+    </div>
     
-        <form>
-            <!--<label>Search</label>-->
-            <!--<input type="text" placeholder="Search" size="30"/>-->
-        </form>
+    <div>
+    <form class="map-choice-button" style=>
+
+        <label>
+            <img src="resources/upload.png" style="height:12px;"/>
+            Upload Map
+            <input type="file" id="fileUpload" class="map-choice" accept="image/*"/>
+        </label>
         
+    </form>
     </div>
     
     <form>
-        <p class="section-title"> Publish Message</p>
+        <p class="section-title"> Set Anchor Positions</p><br>
         <p class="input-header">Topic:</p>
-        <input type="text" id="topic"/>
+        <input type="text" id="topic"><br>
         <p class="input-header">Message:</p>
-        <input type="text" id="message"/>
+        <input type="text" id="message"><br>
         <a class="button--small" onclick="SendMessage();">Publish</a>
     </form>
     
+    <script type="text/javascript" src="phonegap-demo/Map.js"></script>
     
+  </body>
+
     <!--
     <div id="info">
         <h4>Platform: <span id="platform"> &nbsp;</span>,   Version: <span id="version">&nbsp;</span></h4>
@@ -106,6 +116,4 @@
       <img style="width:60px;height:60px" id="test_img" src="" />
     </div>
     -->
-    
-  </body>
 </html>
